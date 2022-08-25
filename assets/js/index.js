@@ -27,27 +27,25 @@ const books = [
   },
 ];
 
-for(let ele of books) {
-
+for (let ele of books.sort((a, b) => a.author.localeCompare(b.author))) {
   let card = document.createElement("div");
   card.className = "card";
-  card.setAttribute('style', 'width: 18rem;')
+  card.setAttribute("style", "width: 18rem;");
 
-  card.style.gap='25px';
-    card.style.marginBottom= '25px';
-    card.style.textAlign='right';
-    card.style.border='2px solid black';
+  card.style.gap = "25px";
+  card.style.marginBottom = "25px";
+  card.style.textAlign = "right";
+  card.style.border = "2px solid black";
 
   let img = document.createElement("img");
   img.className = "card-img-top";
   img.setAttribute("src", ele.img);
 
-
   card.append(img);
 
   let cardBody = document.createElement("div");
   cardBody.classList = "card-body";
-  cardBody.style.backgroundColor = 'rgba(240,240,240)'
+  cardBody.style.backgroundColor = "rgba(240,240,240)";
 
   card.append(cardBody);
 
@@ -70,8 +68,6 @@ for(let ele of books) {
   }
   cardBody.append(header, paragraph, isAlreadyRead);
 
-  let list = document.querySelector('.book-list')
-  list.append(card)
+  let list = document.querySelector(".book-list");
+  list.append(card);
 }
-
-
