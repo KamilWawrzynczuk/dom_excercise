@@ -55,7 +55,7 @@ for (let ele of books.sort((a, b) => a.author.localeCompare(b.author))) {
 
   let paragraph = document.createElement("p");
   paragraph.className = "card-text";
-  paragraph.innerHTML = ele.author;
+  paragraph.innerHTML = ele.author.split(" ").reverse().join(", ");
 
   let isAlreadyRead = document.createElement("button");
   isAlreadyRead.className = "btn btn-secondary";
