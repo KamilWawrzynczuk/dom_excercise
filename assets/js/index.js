@@ -36,6 +36,7 @@ for (let ele of books.sort((a, b) => a.author.localeCompare(b.author))) {
   card.style.marginBottom = "25px";
   card.style.textAlign = "right";
   card.style.border = "2px solid black";
+  card.style.backgroundColor = "rgba(240,240,240)";
 
   let img = document.createElement("img");
   img.className = "card-img-top";
